@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Proyecto interactivo usando CSS, HTML y JavaScript">
+    <title>Proyecto Interactivo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Todocasas</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#form">Vender casa</a></li>
+                <li><a href="#canvas">Puntuanos</a></li>
+                <li><a href="#products">Casas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Bienvenido</h2>
+            <p>Si quieres comprar o vender tu casa este es tu sitio!</p>
+        </section>
+
+        <section id="form">
+            <h2>¿Quieres vender tu casa?</h2>
+            <form>
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Contraseña:</label>
+                <div class="password-container">
+                    <input type="password" id="password" name="password" required>
+                    <button type="button" id="togglePassword">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <section id="canvas">
+            <h2>Puntuanos</h2>
+            <div id="p5-container"></div>
+        </section>
+
+        <section id="products">
+            <h2>Nuestras casas</h2>
+            <div class="product-container">
+                <!-- Plantilla de producto -->
+                <template id="product-template">
+                    <div class="product-card">
+                        <div class="image-container">
+                            <img src="" alt="Imagen del producto">
+                        </div>
+                        <div class="info-container">
+                            <h3 class="product-title"></h3>
+                            <p class="product-description"></p>
+                            <button class="product-button">Mas informacion</button>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Todocasas</p>
+    </footer>
+
+    <dialog id="cookieDialog">
+        <p>Esta web utiliza cookies para mejorar tu experiencia.</p>
+        <button id="acceptCookies">Aceptar</button>
+    </dialog>
+
+    <script src="script.js"></script>
+</body>
+</html>
